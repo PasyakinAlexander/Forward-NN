@@ -4,6 +4,47 @@ function Core()
 {
     SetTabSwitcher();
     SetModal();
+    InitOwlCarousel();
+}
+
+function InitOwlCarousel()
+{
+    var main_carousel = $(".main-carousel").owlCarousel(
+        {
+            items: 1,
+            loop: true,
+            dots: true,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
+
+    $('.btn-next.btn-main-carousel').click(function() {
+        main_carousel.trigger('next.owl.carousel');
+    });
+    $('.btn-prev.btn-main-carousel').click(function() {
+        main_carousel.trigger('prev.owl.carousel');
+    });
+
+    var licenses_carousel = $(".licenses-carousel").owlCarousel(
+        {
+            items: 4,
+            loop: true,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
+
+    var clients_carousel = $(".clients-carousel").owlCarousel(
+        {
+            items: 5,
+            loop: true,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
 }
 
 function SetTabSwitcher()
