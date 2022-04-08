@@ -107,6 +107,7 @@ header{
         a{
             font-family: Akrobat;
             font-size: 21px;
+            font-weight: 700;
         }
     }
 
@@ -174,11 +175,37 @@ header{
             left: -25%;
         }
     }
+
+    .btn-close-menu{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .btn-close-menu::before{
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: white;
+        transform: rotate(45deg);
+        position: absolute;
+    }
+
+    .btn-close-menu::after{
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: white;
+        transform: rotate(-45deg);
+        position: absolute;
+    }
 }
 
 .main-top-block{
     background-image: url(../images/backgrounds/main-top-background.jpg);
-    margin-top: -36px;
+    margin-top: -33px;
     padding-top: 36px;
     padding-bottom: 90px;
 
@@ -296,6 +323,7 @@ header{
         justify-content: center;
         padding: 30px 10px;
         background: white;
+        transition: 0.5s;
 
         img{
             width: fit-content;
@@ -309,9 +337,34 @@ header{
             font-weight: 800;
             margin-top: 20px;
         }
+
+        .time{
+            width: 60px;
+            height: 60px;
+            background-image: url(../images/icons/clock-icon.png);
+            color: #000;
+        }
+
+        .gos{
+            width: 48px;
+            height: 56px;
+            background-image: url(../images/icons/document-icon.png);
+        }
+
+        .consultation{
+            width: 58px;
+            height: 58px;
+            background-image: url(../images/icons/friend-icon.png);
+        }
+
+        .location{
+            width: 46px;
+            height: 62px;
+            background-image: url(../images/icons/map-icon-blue.png);
+        }
     }
 
-    .block.active{
+    .block:hover{
         background: #427dd7;
         color: white;
     }
@@ -349,6 +402,8 @@ header{
             height: 400px;
             padding: 290px 80px 0 30px;
             position: relative;
+            transition: 0.5s;
+            background-blend-mode: soft-light;
 
             h3{
                 color: white;
@@ -359,19 +414,6 @@ header{
                 z-index: 2;
                 position: relative;
                 transition: 0.5s;
-            }
-
-            .hover{
-                content: '';
-                width: calc(100% + 10px);
-                height: calc(100% + 10px);
-                position: absolute;
-                top: -5px;
-                left: -5px;
-                background: #5587d2c3;
-                transition: 0.5s;
-                opacity: 0;
-                z-index: 1;
             }
 
             .btn{
@@ -390,9 +432,9 @@ header{
         }
 
         .block:hover{
-            .hover{
-                opacity: 1;
-            }
+            transform: scale(1.05);
+            z-index: 10;
+            background-color: #5486d1;
 
             h3{
                 margin-top: -100px;
@@ -405,6 +447,10 @@ header{
 
         .documentations{
             background-image: url(../images/backgrounds/documentation-background.jpg);
+        }
+
+        .documentations:hover{
+            
         }
 
         .installation-works{
@@ -429,12 +475,14 @@ header{
                 height: 50%;
                 padding: 90px 90px 0 30px;
                 position: relative;
+                transition: 0.5s;
+                background-blend-mode: soft-light;
             }
 
             .small-block:hover{
-                .hover{
-                    opacity: 1;
-                }
+                transform: scale(1.05);
+                z-index: 10;
+                background-color: #5486d1;
 
                 h3{
                     margin-top: -50px;
@@ -614,8 +662,10 @@ header{
         margin-top: 30px;
 
         .tab{
-            display: flex;
-            flex-wrap: wrap;
+            .projects{
+                display: flex;
+                flex-wrap: wrap;
+            }
 
             .project{
                 width: 25%;
@@ -646,6 +696,7 @@ header{
                         color: white;
                         font-size: 17px;
                         font-weight: 700;
+                        word-break: break-word;
                     }
 
                     .btn{
@@ -701,6 +752,7 @@ header{
 
             img{
                 height: 100%;
+                width: auto;
             }
         }
     }
@@ -745,6 +797,7 @@ header{
             font-family: Akrobat;
             font-size: 35px;
             font-weight: 700;
+            text-transform: uppercase;
         }
 
         p{
@@ -860,15 +913,76 @@ footer{
 
         a{
             font-size: 12px;
+            word-break: break-word;
         }
 
         p{
             font-size: 12px;
             margin: 0;
+            word-break: break-word;
 
             a{
-                color: #2f558e;
+                color: #427dd7;
             }
+        }
+    }
+}
+
+.modal__content{
+    background: #131a20;
+    color: white;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3{
+            margin: 0;
+            font-family: Akrobat;
+            font-size: 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p{
+            font-size: 18px;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .phone{
+            display: flex;
+            flex-direction: column;
+
+            .input-title{
+                font-size: 14px;
+                margin-top: 30px;
+            }
+
+            input, input::placeholder{
+                font-size: 18px;
+                color: white;
+            }
+
+            input{
+                background: none;
+                border: none;
+                padding: 10px 0;
+                border-bottom: 2px solid #427dd7;
+            }
+        }
+
+        .btn{
+            width: 230px;
+            height: 45px;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        .policy{
+            font-size: 11px;
+            margin-top: 30px;
         }
     }
 }

@@ -5,6 +5,20 @@ function Core()
     SetTabSwitcher();
     SetModal();
     InitOwlCarousel();
+    InitLightbox();
+    InitMask();
+    ShowMenu();
+    CloseMenu();
+}
+
+function InitMask()
+{
+    $('#form-callback .phone input').mask("+7(999)999-99-99", {placeholder:"+7(___)___-__-__"});
+}
+
+function InitLightbox()
+{
+    $('.licenses-carousel .carousel-item a').simpleLightbox();
 }
 
 function InitOwlCarousel()
@@ -32,7 +46,27 @@ function InitOwlCarousel()
             loop: true,
             dots: false,
             autoplay: true,
-            smartSpeed: 1000
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1024: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
         }
     );
 
@@ -42,7 +76,27 @@ function InitOwlCarousel()
             loop: true,
             dots: false,
             autoplay: true,
-            smartSpeed: 1000
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1024: {
+                    items: 4
+                },
+                1200:{
+                    items: 5
+                }
+            }
         }
     );
 }
@@ -136,4 +190,27 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function ShowMenu()
+{
+    $('.btn__menu').on('click', function(e) {
+        e.preventDefault();
+        if ($('.navbar').hasClass('active'))
+        {
+            return;
+        }
+        $('.navbar').addClass('active');
+    })
+}
+
+function CloseMenu()
+{
+    $('.btn-close-menu').on('click', function(e) {
+        e.preventDefault();
+        if ($('.navbar').hasClass('active'))
+        {
+            $('.navbar').removeClass('active');
+        }
+    })
 }

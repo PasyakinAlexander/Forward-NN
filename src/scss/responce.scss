@@ -4,6 +4,55 @@
     {
         max-width: 1024px;
     }
+
+    header{
+        .btn-callback{
+            width: 160px;
+        }
+    }
+
+    .main-top-block{
+        .btn-prev{
+            left: -50px;
+        }
+
+        .btn-next{
+            right: -50px;
+        }
+    }
+
+    .our-services{
+        .blocks{
+            .block{
+                padding-top: 200px;
+            }
+
+            .small-blocks{
+                .small-block{
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+
+    .about-company-section{
+        .right-block{
+            .blocks{
+                .block{
+                    width: 30%;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .licenses{
+        .licenses-carousel{
+            .carousel-item{
+                height: 350px;
+            }
+        }
+    }
 }
 
 @media(max-width: 1024px)
@@ -11,6 +60,63 @@
     .container
     {
         max-width: 992px;
+    }
+
+    header{
+        .location, .logo{
+            width: 30%;
+        }
+
+        .mail{
+            width: 20%;
+        }
+
+        .btn-callback{
+            width: 190px;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .phones{
+            margin-right: auto;
+            margin-left: 20px;
+            flex-direction: row;
+
+            a{
+                width: fit-content;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .main-top-block{
+        padding-left: 100px;
+        padding-right: 100px;
+
+        .btn-prev{
+            left: -80px;
+        }
+
+        .btn-next{
+            right: -80px;
+        }
+        
+    }
+
+    .our-services{
+        .blocks{
+            .block{
+                padding-right: 30px;
+                padding-top: 290px;
+            }
+        }
+    }
+
+    .about-company-section{
+        .left-block{
+            width: 60%;
+            padding-right: 50px;
+        }
     }
 }
 
@@ -20,6 +126,138 @@
     {
         max-width: 768px;
     }
+
+    header{
+        .location, .logo, .mail{
+            width: fit-content;
+        }
+    }
+
+    .main-top-block{
+        .main-carousel{
+            .carousel-item{
+                width: 100%;
+            }
+        }
+    }
+
+    .kp{
+        .block{
+            width: 45%;
+            margin-top: 20px;
+        }
+    }
+
+    .our-services{
+        .blocks{
+            .block{
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .small-blocks{
+                width: 100%;
+                flex-direction: row;
+
+                .small-block{
+                    background-size: cover;
+                    background-position: center;
+                    height: 100%;
+                    width: 50%;
+                    padding-top: 300px;
+                }
+            }
+        }
+    }
+
+    .about-company-section{
+        .container{
+            flex-direction: column;
+        }
+
+        .left-block{
+            width: 100%;
+        }
+
+        .right-block{
+            width: 100%;
+            margin-top: 50px;
+
+            .blocks{
+                .block{
+                    width: 50%;
+                    margin-right: 0;
+                    align-items: center;
+
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .scheme-of-works{
+        .block{
+            width: 48%;
+        }
+
+        .section-title{
+            width: 48%;
+        }
+    }
+
+    .our-projects{
+        .btn__switch__wrapper{
+            padding: 0;
+
+            .btn__tab__switch{
+                padding: 8px;
+            }
+        }
+
+        .tab__viewer{
+            .tab{
+                .project{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .licenses{
+        .licenses-carousel{
+            .carousel-item{
+                height: fit-content;
+
+                img{
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+        }
+    }
+
+    .ask-question{
+        form:after{
+            right: -235px;
+        }
+    }
+
+    footer{
+        .nav{
+            width: 20%;
+        }
+
+        .works{
+            width: 30%;
+        }
+
+        .info{
+            width: 30%;
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -28,6 +266,149 @@
     {
         max-width: 576px;
     }
+
+    header{
+        .btn-callback{
+            margin-right: 0;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        .mail{
+            margin-top: 20px;
+        }
+
+        .phones{
+            margin-left: auto;
+            margin-top: 20px;
+        }
+    }
+
+    .btn__menu{
+        display: block;
+        position: absolute;
+    }
+
+    .navbar{
+        width: 50vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        border: none;
+        background-color: #131a20ec;
+        z-index: 999;
+        color: white;
+        transition: 0.5s;
+
+        .container{
+            height: 100%;
+        }
+
+        ul{
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            li{
+                margin-top: 20px;
+            }
+
+            li:first-child{
+                margin-top: 0;
+            }
+
+            li.active::before{
+                content: none;
+            }
+
+            .separator{
+                display: none;
+            }
+        }
+
+        .btn-close-menu{
+            display: block;
+        }
+    }
+
+    .navbar.active{
+        left: 0;
+    }
+
+    .main-top-block{
+        margin-top: 0;
+
+        .main-carousel{
+            margin-top: 30px;
+        }
+    }
+
+    .our-services{
+        .blocks{
+            .small-blocks{
+                flex-direction: column;
+                height: 500px;
+                
+                .small-block{
+                    width: 100%;
+                    height: 250px;
+                    padding: 0;
+                    padding: 150px 20px 0;
+                }
+            }
+
+            .block{
+                height: 250px;
+                padding: 0;
+                padding: 150px 20px 0;
+            }
+        }
+    }
+
+    .scheme-of-works{
+        .section-title{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .block{
+            width: 100%;
+        }
+    }
+
+    .our-projects{
+        .btn__switch__wrapper{
+            flex-direction: column;
+        }
+    }
+
+    .ask-question{
+        form:after{
+            content: none;
+        }
+    }
+
+    footer{
+        .footer{
+            .separator{
+                display: none;
+            }
+
+            .nav, .works{
+                width: 50%;
+            }
+
+            .info{
+                width: 100%;
+                align-items: flex-start;
+            }
+        }
+
+        .btn__menu{
+            display: none;
+        }
+    }
 }
 
 @media(max-width: 576px)
@@ -35,5 +416,133 @@
     .container
     {
         max-width: 100%;
+    }
+
+    header{
+        .container{
+            flex-direction: column;
+        }
+        .phones{
+            flex-direction: column;
+        }
+    }
+
+    .main-top-block{
+        padding-right: 0;
+        padding-left: 0;
+
+        .btn-next, .btn-prev{
+            display: none;
+        }
+
+        .main-carousel{
+            .carousel-item{
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    .kp{
+        .block{
+            width: 100%;
+        }
+    }
+
+    .our-services{
+        .blocks{
+            .small-blocks{
+                .small-block:hover{
+                    h3{
+                        margin-top: -80px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-title{
+        font-size: 48px;
+    }
+
+    .about-company-section{
+        .right-block{
+            .blocks{
+                .block{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .our-projects{
+        .tab__viewer{
+            .tab{
+                .project{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .licenses{
+        .section-title{
+            width: 100%;
+        }
+    }
+
+    .ask-question{
+        form{
+            padding: 20px 30px;
+
+            h3{
+                font-size: 28px;
+                text-align: center;
+            }
+
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .phone{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    footer{
+        .footer{
+            .nav, .works{
+                width: 100%;
+            }
+
+            .works{
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .modal__content{
+        form{
+            h3{
+                font-size: 28px;
+                text-align: center;
+            }
+
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .phone{
+                p{
+                    text-align: left;
+                }
+            }
+        }
     }
 }
