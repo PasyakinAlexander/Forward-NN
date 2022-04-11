@@ -13,7 +13,7 @@ function Core()
 
 function InitMask()
 {
-    $('#form-callback .phone input').mask("+7(999)999-99-99", {placeholder:"+7(___)___-__-__"});
+    $('#form-callback .phone input').mask("+7 (999) 999-99-99", {placeholder:"+7 (___) ___-__-__"});
 }
 
 function InitLightbox()

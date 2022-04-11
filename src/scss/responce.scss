@@ -9,15 +9,15 @@
         .btn-callback{
             width: 160px;
         }
+
+        .location{
+            width: 180px;
+        }
     }
 
     .main-top-block{
         .btn-prev{
             left: -50px;
-        }
-
-        .btn-next{
-            right: -50px;
         }
     }
 
@@ -96,11 +96,12 @@
         .btn-prev{
             left: -80px;
         }
-
-        .btn-next{
-            right: -80px;
-        }
         
+        .main-carousel{
+            .carousel-item{
+                width: 70%;
+            }
+        }
     }
 
     .our-services{
@@ -143,8 +144,8 @@
 
     .kp{
         .block{
-            width: 45%;
-            margin-top: 20px;
+            width: 47%;
+            margin-top: 40px;
         }
     }
 
@@ -240,8 +241,13 @@
     }
 
     .ask-question{
+        form{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         form:after{
-            right: -235px;
+            content: none;
         }
     }
 
@@ -285,8 +291,11 @@
     }
 
     .btn__menu{
-        display: block;
+        display: flex;
+        align-items: center;
         position: absolute;
+        top: 15px;
+        left: 15px;
     }
 
     .navbar{
@@ -344,6 +353,13 @@
         }
     }
 
+    .kp{
+        .block{
+            width: 47%;
+            margin-top: 30px;
+        }
+    }
+
     .our-services{
         .blocks{
             .small-blocks{
@@ -379,13 +395,8 @@
 
     .our-projects{
         .btn__switch__wrapper{
-            flex-direction: column;
-        }
-    }
-
-    .ask-question{
-        form:after{
-            content: none;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
     }
 
@@ -425,6 +436,11 @@
         .phones{
             flex-direction: column;
         }
+    }
+
+    .navbar{
+        width: 100vw;
+        left: -100vw;
     }
 
     .main-top-block{
@@ -477,6 +493,10 @@
     }
 
     .our-projects{
+        .btn__switch__wrapper{
+            flex-direction: column;
+        }
+
         .tab__viewer{
             .tab{
                 .project{
@@ -518,6 +538,14 @@
         .footer{
             .nav, .works{
                 width: 100%;
+
+                a{
+                    margin-top: 10px;
+                }
+
+                a:first-child{
+                    margin: 0;
+                }
             }
 
             .works{
@@ -527,6 +555,8 @@
     }
 
     .modal__content{
+        padding: 25px;
+        
         form{
             h3{
                 font-size: 28px;
