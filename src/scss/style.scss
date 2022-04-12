@@ -988,4 +988,174 @@ footer{
     }
 }
 
+.contacts{
+    margin-top: 60px;
+    padding-bottom: 60px;
+
+    h2{
+        margin: 0;
+        font-family: Akrobat;
+        font-size: 39px;
+        font-weight: 700;
+    }
+
+    .blocks{
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .left-block{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            .phones-time{
+                width: 100%;
+                height: 50%;
+                background-color: #131a20;
+                color: white;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 70px 0;
+                border-radius: 10px 0 0 0;
+
+                .phones{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding-left: 45px;
+                    justify-content: center;
+            
+                    a{
+                        font-family: Akrobat;
+                        font-size: 21px;
+                        font-weight: 700;
+                    }
+                }
+            
+                .phones::before{
+                    content: '';
+                    width: 31px;
+                    height: 31px;
+                    background-image: url(../images/icons/phone-icon.png);
+                    position: absolute;
+                    top: calc(50% - 15px);
+                    left: 4px;
+                    background-color: #427dd7;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    z-index: 1;
+                }
+            
+                .phones::after{
+                    content: '';
+                    width: 39px;
+                    height: 39px;
+                    position: absolute;
+                    top: calc(50% - 19px);
+                    left: 0;
+                    background-color: #233d60;
+                    border-radius: 50%;
+                }
+
+                p{
+                    margin: 0;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    color: #427dd7;
+                }
+
+                .btn{
+                    margin-top: 20px;
+                    font-size: 16px;
+                    width: 225px;
+                    height: 45px;
+                }
+            }
+
+            .map{
+                width: 100%;
+                height: 50%;
+                border-radius: 0 0 0 10px;
+            }
+        }
+
+        .right-block{
+            width: 50%;
+            padding: 40px 30px;
+            background-color: #dfdfdf;
+            border-radius: 0 10px 10px 0;
+
+            h3{
+                font-size: 16px;
+                margin: 0;
+                font-weight: 400;
+                margin-bottom: 50px;
+            }
+
+            p{
+                margin: 0;
+                margin-top: 20px;
+                font-size: 16px;
+
+                a{
+                    color: #a3c3f3;
+                }
+            }
+
+            .carousel{
+                position: relative;
+
+                .contacts-carousel{
+                    margin-top: 50px;
+                }
+    
+                .btn-contacts-carousel{
+                    position: absolute;
+                    background: #131a20;
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    top: 50%;
+                    z-index: 10;
+                }
+            
+                .btn-contacts-carousel::before{
+                    content: '';
+                    width: 15px;
+                    height: 2px;
+                    background: white;
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    left: 20px;
+                    transform: rotate(45deg);
+                }
+            
+                .btn-contacts-carousel::after{
+                    content: '';
+                    width: 15px;
+                    height: 2px;
+                    background: white;
+                    position: absolute;
+                    bottom: calc(50% - 6px);
+                    left: 20px;
+                    transform: rotate(-45deg);
+                }
+            
+                .btn-prev{
+                    transform: rotate(180deg);
+                    left: -25px;
+                }
+            
+                .btn-next{
+                    right: -25px;
+                }
+            }
+        }
+    }
+}
+
 @import 'responce';

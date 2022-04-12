@@ -465,6 +465,23 @@
             display: none;
         }
     }
+
+    .contacts{
+        .blocks{
+            .left-block{
+                width: 100%;
+
+                .phones-time{
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+
+            .right-block{
+                width: 100%;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
 }
 
 @media(max-width: 576px)

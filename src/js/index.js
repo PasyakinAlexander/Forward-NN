@@ -99,6 +99,23 @@ function InitOwlCarousel()
             }
         }
     );
+
+    var contacts_carousel = $(".contacts-carousel").owlCarousel(
+        {
+            items: 1,
+            loop: true,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 1000
+        }
+    );
+
+    $('.btn-next.btn-contacts-carousel').click(function() {
+        contacts_carousel.trigger('next.owl.carousel');
+    });
+    $('.btn-prev.btn-contacts-carousel').click(function() {
+        contacts_carousel.trigger('prev.owl.carousel');
+    });
 }
 
 function SetTabSwitcher()
