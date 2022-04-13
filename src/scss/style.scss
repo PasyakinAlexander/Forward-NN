@@ -995,7 +995,7 @@ footer{
     h2{
         margin: 0;
         font-family: Akrobat;
-        font-size: 39px;
+        font-size: 54px;
         font-weight: 700;
     }
 
@@ -1029,7 +1029,7 @@ footer{
             
                     a{
                         font-family: Akrobat;
-                        font-size: 21px;
+                        font-size: 30px;
                         font-weight: 700;
                     }
                 }
@@ -1101,7 +1101,7 @@ footer{
                 font-size: 16px;
 
                 a{
-                    color: #a3c3f3;
+                    color: #427dd7;
                 }
             }
 
@@ -1154,6 +1154,25 @@ footer{
                     right: -25px;
                 }
             }
+        }
+    }
+}
+
+.bread-crumbs{
+    margin-top: 40px;
+
+    .container{
+        display: flex;
+        font-size: 12px;
+
+        .separator{
+            margin: 0;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        a.active{
+            color: #427dd7;
         }
     }
 }

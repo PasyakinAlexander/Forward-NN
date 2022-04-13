@@ -16,3 +16,10 @@ mixin InputRadio(name, label)
 mixin BtnMenu()
     button.btn__menu
         span
+
+mixin BreadCrumbs(page, linkPage)
+    section.bread-crumbs 
+        .container 
+            a(href="index.html") Главная 
+            p.separator - 
+            a(href=linkpage).active= page
