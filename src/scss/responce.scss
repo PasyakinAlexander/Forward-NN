@@ -57,6 +57,28 @@
             }
         }
     }
+
+    .services{
+        .blocks{
+            .block{
+                height: 320px;
+            }
+        }
+    }
+
+    .service{
+        .top-block{
+            .menu{
+                a{
+                    padding: 16px;
+                }
+            }
+
+            img{
+                width: 520px;
+            }
+        } 
+    } 
 }
 
 @media(max-width: 1024px)
@@ -121,6 +143,14 @@
         .left-block{
             width: 60%;
             padding-right: 50px;
+        }
+    }
+
+    .services{
+        .blocks{
+            .block{
+                height: 310px;
+            }
         }
     }
 }
@@ -269,6 +299,34 @@
             width: 30%;
         }
     }
+
+    .services{
+        .blocks{
+            .block{
+                height: 360px;
+            }
+        }
+    }
+
+    .service{
+        .top-block{
+            flex-wrap: wrap;
+
+            .menu{
+                width: 100%;
+
+                a{
+                    padding: 25px;
+                }
+            }
+
+            img{
+                width: 100%;
+                padding: 0;
+                margin-top: 20px;
+            }
+        } 
+    } 
 }
 
 @media(max-width: 768px)
@@ -482,6 +540,14 @@
             }
         }
     }
+
+    .services{
+        .blocks{
+            .block{
+                height: 265px;
+            }
+        }
+    }
 }
 
 @media(max-width: 576px)
@@ -643,6 +709,48 @@
                 p{
                     text-align: left;
                 }
+            }
+        }
+    }
+
+    .services{
+        .blocks{
+            .block{
+                height: auto;
+                width: 100%;
+
+                img{
+                    width: 100%;
+                }
+
+                .descr{
+                    padding-top: 20px;
+
+                    h3{
+                        font-size: 20px;
+                    }
+
+                    .btn{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .service{
+        .btns{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .btn{
+                width: 100%;
+            }
+
+            .btn-without-bg{
+                margin: 0;
+                margin-top: 15px;
             }
         }
     }
